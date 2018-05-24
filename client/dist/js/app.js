@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('app', ['ngRoute', 'toaster','appControllers', 'appServices', 'appDirectives', 'ngFileUpload'])
+var app = angular.module('app', ['ngRoute', 'toaster','appControllers', 'appServices', 'appDirectives'])
 
 var appServices = angular.module('appServices', []);
 var appControllers = angular.module('appControllers', []);
