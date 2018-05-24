@@ -114,7 +114,7 @@ exports.getUser = function(req, res) {
 			if(err){
 				res.status(err.code).json(err.message);
 			}else{
-				var pickKeys = ['_id', 'name', 'email', 'address', 'role'];	
+				var pickKeys = ['_id', 'name', 'email', 'address', 'role', 'created_date'];	
 				user = _.pick(user, pickKeys);
 				console.log(user);
 				res.status(201).json(user);
@@ -193,7 +193,7 @@ exports.listAllUsers = function(req, res) {
 		}else{
 			console.log(users);
 			var usersList = []
-			var pickKeys = ['_id', 'name', 'email', 'address', 'role'];
+			var pickKeys = ['_id', 'name', 'email', 'address', 'role', 'created_date'];
 
 			users = _.pickFromObjects(users, pickKeys);
 			console.log(users);
