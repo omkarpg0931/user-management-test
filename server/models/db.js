@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-// var dbURI = 'mongodb://localhost/kodework';
+
 var config = require('../config');
 
 mongoose.connect(config.db);

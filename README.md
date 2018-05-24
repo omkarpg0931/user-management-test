@@ -21,10 +21,6 @@ You need `mongodb` up and running on port `27017`
 
 Clone the repository with: `git clone https://github.com/omkarpg0931/user-management-test.git`
 
-### Build angularjs app
-
-install bower dependencies: `bower install`
-
 ### Install Nodejs App
 
 Install node dependencies: `npm install`
