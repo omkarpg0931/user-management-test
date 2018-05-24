@@ -12,8 +12,8 @@ if (env === "production") {
   config.db = process.env.DB_LINK;
   config.port = process.env.PORT;
   config.secret = process.env.secret;
-  config.port = process.env.email;
-  config.secret = process.env.password;
+  config.email = process.env.email;
+  config.password = process.env.password;
 }
 
 module.exports = config;

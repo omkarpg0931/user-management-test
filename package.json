@@ -1,7 +1,7 @@
 {
-  "name": "mean-auth",
+  "name": "user-management",
   "scripts": {
-    "prestart": "npm install",
+    "prestart": "npm install; bower install",
     "start": "nodemon server/server.js"
   },
   "dependencies": {
