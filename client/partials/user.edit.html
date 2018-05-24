@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>Update user</h1>
+
+  <form novalidate="novalidate" class="form-horizontal">
+    <div class="control-group">
+      <label for="inputName" class="col-sm-4 control-label">Name</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputName" ng-model="user.name">
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="inputEmail" class="col-sm-4 control-label">Email</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputEmail" ng-model="user.email">
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="inputAddress" class="col-sm-4 control-label">Address</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputAddress" ng-model="user.address">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label for="inputRole" class="col-sm-4 control-label">Role</label>
+      <div class="col-sm-4">
+        <select ng-model="user.role">
+          <option value="">--- Select an option ---</option>
+          <option ng-selected= "{{role == user.role}}" ng-repeat="role in user_roles" 
+                  value="{{role}}">{{role}}     
+          </option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="control-group">
+      <div class="controls">
+        <a ng-click="cancel()" class="btn btn-small btn-primary">cancel</a>
+        <a ng-click="updateUser()" class="btn btn-small btn-primary">update user</a>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,26 @@
+<div class="span6">
+    <table class="table table-striped table-condensed">
+      <thead>
+        <tr>
+          <th style="min-width: 80px;">Full name</th>
+          <th style="min-width: 80px;">Email</th>
+          <th style="min-width: 80px;">Address</th>
+          <th style="min-width: 80px;">Created Date</th>
+          <th style="min-width: 80px;">Role</th>
+          <th style="width:20px;">&nbsp;</th>
+          <th style="width:20px;">&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-click="editUser(user._id)" ng-repeat="user in users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.address }}</td>
+          <td>{{ user.created_date | date:"y-MMM-dd hh:mm" }}</td>
+          <td>{{ user.role }}</td>
+          <td><a ng-click="$event.stopPropagation();deleteUser(user._id)" class="btn btn-small btn-danger">delete</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <a ng-click="createNewUser()" class="btn btn-small btn-primary">create new user</a>
+  </div>
